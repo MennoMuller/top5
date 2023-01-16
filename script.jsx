@@ -45,7 +45,10 @@ const City = (props) => {
   return (
     <div className="city">
       <span className="city-name">{props.name}</span>
-      <img src={"img/" + props.image} className="city-img" />
+      <img
+        src={"img/" + props.image}
+        className="city-img"
+      />
       <div className="city-facts">
         <div className="city-fact">
           <b> Country:</b> {props.country}
@@ -61,10 +64,10 @@ const City = (props) => {
   );
 };
 
-const Header = (props) => {
+const Header = ({ title }) => {
   return (
     <header id="test">
-      <h1>{props.title}</h1>
+      <h1>{title}</h1>
     </header>
   );
 };
@@ -90,5 +93,7 @@ const App = () => {
   );
 };
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(
+  document.getElementById("root")
+);
 root.render(<App />);
